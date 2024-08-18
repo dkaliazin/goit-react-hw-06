@@ -8,7 +8,20 @@ import css from './App.module.css';
 //import '../ContactList/ContactList'
 
 function App() {
-  const [count, setCount] = useState(0);
+ 
+  return (
+    <div className={css.container}>
+      <h1>Phonebook</h1>
+      <ContactForm/>
+      <SearchBox/>
+      <ContactList/>
+    </div>
+  )
+}
+
+export default App;
+/*
+ const [count, setCount] = useState(0);
   const [contacts, setContacts] = useState(initialContacts);
 
   const [searchBox, setSearchBox] = useState("");
@@ -40,15 +53,4 @@ function App() {
         return prevContacts.filter((contact) => contact.id !== contactId);
     });
   }
-  
-  return (
-    <div className={css.container}>
-      <h1>Phonebook</h1>
-      <ContactForm onAdd={addContact} />
-      <SearchBox value={searchBox} onSearch={setSearchBox}/>
-      <ContactList contacts={visibleContacts} onDelete={deleteContact}/>
-    </div>
-  )
-}
-
-export default App;
+  */
